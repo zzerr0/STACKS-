@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int n=10, stack[10], top=-1;
+void insert(int d)
+{
+ if(top>=n-1)
+  cout<<"\n Stack Overflow \n";
+ else 
+ top++;
+ stack[top]=d; 
+}
+
+void display()
+{
+  if(top>=0)
+ {
+  cout<<"____________"<<endl;
+  for(int i=top;i>=0;i--)
+  {
+  cout<<"| "<<i<<" ---> "<<stack[i]<<" |"<<endl;
+  }
+  cout<<" ___________";
+ }
+}
+ 
+int main()
+{
+  
+  insert(5);
+  insert(6);
+  insert(7);
+  insert(8);
+  insert(9);
+  display();
+ 
+ return 0;
+}
